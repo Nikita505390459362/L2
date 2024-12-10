@@ -5,35 +5,37 @@
 #include <iostream>
 #include <stdexcept>
 
+using namespace std;
+
 class AEROFLOT {
-private:
-    std::string destination;
-    std::string flightNumber;
-    std::string aircraftType;
+protected:
+    string destination;
+    string flightNumber;
+    string aircraftType;
 
 public:
 
+    AEROFLOT(string dest, string flight, string aircraft);
+
     AEROFLOT();
 
-    AEROFLOT(const std::string &dest, const std::string &num, const std::string &type);
-
-    AEROFLOT(const AEROFLOT &other);
+    AEROFLOT(const AEROFLOT& other);
 
     virtual ~AEROFLOT();
 
-    std::string getDestination() const;
-    void setDestination(const std::string &dest);
+    string getDestination() const;
+    string getFlightNumber() const;
+    string getAircraftType() const;
 
-    std::string getFlightNumber() const;
-    void setFlightNumber(const std::string &num);
+    void setDestination(const string& dest);
+    void setFlightNumber(const string& flight);
+    void setAircraftType(const string& aircraft);
 
-    std::string getAircraftType() const;
-    void setAircraftType(const std::string &type);
+    virtual void display() const;
 
-    AEROFLOT& operator=(const AEROFLOT &other);
+    friend ostream& operator<<(ostream& os, const AEROFLOT& flight);
 
-    friend std::ostream& operator<<(std::ostream &os, const AEROFLOT &flight);
-    friend std::istream& operator>>(std::istream &is, AEROFLOT &flight);
+    friend istream& operator>>(istream& is, AEROFLOT& flight);
 };
 
-#endif
+#endif // AEROFLOT_H
