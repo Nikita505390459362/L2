@@ -2,20 +2,20 @@
 
 AEROFLOT::AEROFLOT(const string& dest, const string& flight, const string& aircraft)
         : destination(dest), flightNumber(flight), aircraftType(aircraft) {
-    // Удалено уведомление о вызове конструктора
+
 }
 
 AEROFLOT::AEROFLOT() : destination(""), flightNumber(""), aircraftType("") {
-    // Удалено уведомление о вызове конструктора
+
 }
 
 AEROFLOT::AEROFLOT(const AEROFLOT& other)
         : destination(other.destination), flightNumber(other.flightNumber), aircraftType(other.aircraftType) {
-    // Удалено уведомление о вызове конструктора копирования
+
 }
 
 AEROFLOT::~AEROFLOT() noexcept {
-    // Удалено уведомление о вызове деструктора
+
 }
 
 string AEROFLOT::getDestination() const { return destination; }

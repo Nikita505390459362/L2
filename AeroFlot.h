@@ -14,13 +14,12 @@ protected:
     string aircraftType;
 
 public:
-    // Конструкторы и деструктор
-    AEROFLOT(const string& dest, const string& flight, const string& aircraft);
-    AEROFLOT();  // Конструктор по умолчанию
-    AEROFLOT(const AEROFLOT& other);  // Конструктор копирования
-    ~AEROFLOT();  // Деструктор
 
-    // Методы для работы с данными
+    AEROFLOT(const string& dest, const string& flight, const string& aircraft);
+    AEROFLOT();
+    AEROFLOT(const AEROFLOT& other);
+    ~AEROFLOT();
+
     string getDestination() const;
     string getFlightNumber() const;
     string getAircraftType() const;
@@ -28,13 +27,10 @@ public:
     void setFlightNumber(const string& flight);
     void setAircraftType(const string& aircraft);
 
-    // Метод проверки на пустоту
     bool isEmpty() const;
 
-    // Метод для отображения рейса
     virtual void display() const;
 
-    // Операторы
     friend ostream& operator<<(ostream& os, const AEROFLOT& flight);
     friend istream& operator>>(istream& is, AEROFLOT& flight);
 };
