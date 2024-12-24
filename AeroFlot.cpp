@@ -1,22 +1,21 @@
 #include "AEROFLOT.h"
 
-
-AEROFLOT::AEROFLOT(string dest, string flight, string aircraft)
+AEROFLOT::AEROFLOT(const string& dest, const string& flight, const string& aircraft)
         : destination(dest), flightNumber(flight), aircraftType(aircraft) {
-    cout << "Конструктор с параметрами для рейса " << flightNumber << " вызван.\n";
+    // Удалено уведомление о вызове конструктора
 }
 
 AEROFLOT::AEROFLOT() : destination(""), flightNumber(""), aircraftType("") {
-    cout << "Конструктор по умолчанию вызван.\n";
+    // Удалено уведомление о вызове конструктора
 }
 
 AEROFLOT::AEROFLOT(const AEROFLOT& other)
         : destination(other.destination), flightNumber(other.flightNumber), aircraftType(other.aircraftType) {
-    cout << "Конструктор копирования для рейса " << other.flightNumber << " вызван.\n";
+    // Удалено уведомление о вызове конструктора копирования
 }
 
-AEROFLOT::~AEROFLOT() {
-    cout << "Деструктор для рейса " << flightNumber << " вызван.\n";
+AEROFLOT::~AEROFLOT() noexcept {
+    // Удалено уведомление о вызове деструктора
 }
 
 string AEROFLOT::getDestination() const { return destination; }
@@ -26,6 +25,10 @@ string AEROFLOT::getAircraftType() const { return aircraftType; }
 void AEROFLOT::setDestination(const string& dest) { destination = dest; }
 void AEROFLOT::setFlightNumber(const string& flight) { flightNumber = flight; }
 void AEROFLOT::setAircraftType(const string& aircraft) { aircraftType = aircraft; }
+
+bool AEROFLOT::isEmpty() const {
+    return destination.empty() || flightNumber.empty() || aircraftType.empty();
+}
 
 void AEROFLOT::display() const {
     cout << "Рейс " << flightNumber << ": Пункт назначения - " << destination
@@ -40,10 +43,10 @@ ostream& operator<<(ostream& os, const AEROFLOT& flight) {
 
 istream& operator>>(istream& is, AEROFLOT& flight) {
     cout << "Введите пункт назначения: ";
-    getline(is, flight.destination);
+    if (!getline(is, flight.destination)) return is;
     cout << "Введите номер рейса: ";
-    getline(is, flight.flightNumber);
+    if (!getline(is, flight.flightNumber)) return is;
     cout << "Введите тип самолета: ";
-    getline(is, flight.aircraftType);
+    if (!getline(is, flight.aircraftType)) return is;
     return is;
 }

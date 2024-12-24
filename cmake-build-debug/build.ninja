@@ -67,24 +67,6 @@ build CMakeFiles/L2.dir/AEROFLOTWithCheck.cpp.obj: CXX_COMPILER__L2_unscanned_De
   OBJECT_DIR = CMakeFiles\L2.dir
   OBJECT_FILE_DIR = CMakeFiles\L2.dir
 
-build CMakeFiles/L2.dir/l2-2/main.cpp.obj: CXX_COMPILER__L2_unscanned_Debug C$:/Users/Nikita/CLionProjects/L2/l2-2/main.cpp || cmake_object_order_depends_target_L2
-  DEP_FILE = CMakeFiles\L2.dir\l2-2\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\L2.dir
-  OBJECT_FILE_DIR = CMakeFiles\L2.dir\l2-2
-
-build CMakeFiles/L2.dir/l2-2/FileHandler.cpp.obj: CXX_COMPILER__L2_unscanned_Debug C$:/Users/Nikita/CLionProjects/L2/l2-2/FileHandler.cpp || cmake_object_order_depends_target_L2
-  DEP_FILE = CMakeFiles\L2.dir\l2-2\FileHandler.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\L2.dir
-  OBJECT_FILE_DIR = CMakeFiles\L2.dir\l2-2
-
-build CMakeFiles/L2.dir/l2-2/SentenceReverser.cpp.obj: CXX_COMPILER__L2_unscanned_Debug C$:/Users/Nikita/CLionProjects/L2/l2-2/SentenceReverser.cpp || cmake_object_order_depends_target_L2
-  DEP_FILE = CMakeFiles\L2.dir\l2-2\SentenceReverser.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\L2.dir
-  OBJECT_FILE_DIR = CMakeFiles\L2.dir\l2-2
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target L2
@@ -93,7 +75,7 @@ build CMakeFiles/L2.dir/l2-2/SentenceReverser.cpp.obj: CXX_COMPILER__L2_unscanne
 #############################################
 # Link the executable L2.exe
 
-build L2.exe: CXX_EXECUTABLE_LINKER__L2_Debug CMakeFiles/L2.dir/main.cpp.obj CMakeFiles/L2.dir/AeroFlot.cpp.obj CMakeFiles/L2.dir/AEROFLOTWithCheck.cpp.obj CMakeFiles/L2.dir/l2-2/main.cpp.obj CMakeFiles/L2.dir/l2-2/FileHandler.cpp.obj CMakeFiles/L2.dir/l2-2/SentenceReverser.cpp.obj
+build L2.exe: CXX_EXECUTABLE_LINKER__L2_Debug CMakeFiles/L2.dir/main.cpp.obj CMakeFiles/L2.dir/AeroFlot.cpp.obj CMakeFiles/L2.dir/AEROFLOTWithCheck.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\L2.dir

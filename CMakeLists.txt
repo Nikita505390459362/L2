@@ -8,8 +8,4 @@ add_executable(L2 main.cpp
         AeroFlot.h
         AEROFLOTWithCheck.cpp
         AEROFLOTWithCheck.h
-        l2-2/main.cpp
-        l2-2/FileHandler.cpp
-        l2-2/FileHandler.h
-        l2-2/SentenceReverser.cpp
-        l2-2/SentenceReverser.h)
+)

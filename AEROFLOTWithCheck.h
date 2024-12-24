@@ -5,9 +5,10 @@
 
 class AEROFLOTWithCheck : public AEROFLOT {
 public:
-    AEROFLOTWithCheck(string dest, string flight, string aircraft);
+    // Конструктор с параметрами
+    AEROFLOTWithCheck(const string& dest, const string& flight, const string& aircraft);
 
-
+    // Переопределение метода display
     void display() const override;
 };
 
